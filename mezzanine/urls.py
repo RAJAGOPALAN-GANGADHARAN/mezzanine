@@ -38,15 +38,15 @@ if "django.contrib.sitemaps" in settings.INSTALLED_APPS:
     ]
 
 # Return a robots.txt that disallows all spiders when DEBUG is True.
-if getattr(settings, "DEBUG", False):
-    urlpatterns += [
-        path(
-            "robots.txt",
-            lambda r: HttpResponse(
-                "User-agent: *\nDisallow: /", content_type="text/plain"
-            ),
-        ),
-    ]
+# if getattr(settings, "DEBUG", False):
+#     urlpatterns += [
+#         path(
+#             "robots.txt",
+#             lambda r: HttpResponse(
+#                 "User-agent: *\nDisallow: /", content_type="text/plain"
+#             ),
+#         ),
+#     ]
 
 # Miscellanous Mezzanine patterns.
 urlpatterns += [
